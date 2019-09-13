@@ -1,0 +1,132 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * App level styles
+ *
+ *
+ */
+
+html {
+    background-color: rgb(245, 245, 245);
+    color: var(--color--surface--primary-on);
+    font-family: var(--typography--primary-font-family);
+    font-size: 16px;
+}
+
+/**
+ *
+ *
+ * Color
+ *
+ *
+ * https://material.io/design/color/
+ * https://ant.design/docs/spec/colors
+ * https://code.visualstudio.com/api/references/theme-color
+ */
+
+html {
+    --color--surface: rgb(255, 255, 255);
+    --color--surface--light: rgb(255, 255, 255);
+    --color--surface--dark: rgb(200, 200, 200);
+    --color--surface--disabled: rgba(0, 0, 0, 0.12);
+    --color--surface--hover: rgb(0, 0, 0, 0.04);
+    --color--surface--focus: rgb(0, 0, 0, 0.12);
+    --color--surface--active: rgb(0, 0, 0, 0.16);
+    --color--surface--primary-on: rgba(0, 0, 0, 0.87);
+    --color--surface--secondary-on: rgba(0, 0, 0, 0.54);
+    --color--surface--disabled-on: rgba(0, 0, 0, 0.38);
+    --color--surface--hint-on: rgba(0, 0, 0, 0.38);
+    --color--surface--icon-on: rgba(0, 0, 0, 0.8);
+    --color--primary: rgb(0, 170, 70);
+    --color--primary--light: rgb(0, 190, 80);
+    --color--primary--dark: rgb(0, 110, 20);
+    --color--primary--hover: rgb(0, 170, 70, 0.92);
+    --color--primary--secondary-hover: rgb(0, 170, 70, 0.04);
+    --color--primary--focus: rgb(0, 170, 70, 0.76);
+    --color--primary--secondary-focus: rgb(0, 170, 70, 0.12);
+    --color--primary--active: rgb(0, 170, 70, 0.68);
+    --color--primary--secondary-active: rgb(0, 170, 70, 0.16);
+    --color--primary--primary-on: rgb(255, 255, 255);
+    --color--primary--secondary-on: rgb(0, 170, 70, 0.87);
+    --color--primary--disabled-on: rgba(0, 0, 0, 0.4);
+    --color--secondary: rgb(0, 125, 210);
+    --color--secondary--light: rgb(0, 150, 255);
+    --color--secondary--dark: rgb(0, 90, 150);
+    --color--secondary--hover: rgb(0, 125, 210, 0.92);
+    --color--secondary--focus: rgb(0, 125, 210, 0.76);
+    --color--secondary--active: rgb(0, 125, 210, 0.68);
+    --color--secondary--primary-on: rgb(255, 255, 255);
+    --color--accent: rgb(255, 64, 129);
+    --color--accent--light: rgb(255, 128, 171);
+    --color--accent--dark: rgb(245, 0, 87);
+    --color--error: rgb(220, 40, 0);
+    --color--error--light: rgb(200, 40, 0);
+    --color--error--dark: rgb(255, 40, 0);
+    --color--error--primary-on: rgba(255, 255, 255, 0.87);
+    --color--danger: rgb(205, 0, 0);
+    --color--danger--light: rgb(255, 0, 0);
+    --color--danger--dark: rgb(155, 0, 0);
+    --color--danger--primary-on: rgba(255, 255, 255, 0.87);
+    --color--caution: rgb(255, 214, 0);
+    --color--caution--primary-on: rgba(0, 0, 0, 0.87);
+    --color--border: rgba(0, 0, 0, 0.42);
+    --color--border--hover: rgba(0, 0, 0, 0.87);
+    --color--border--focus: rgba(0, 0, 0, 0.42);
+    --color--border--active: rgba(0, 0, 0, 0.42);
+    --color--border--disabled: rgba(0, 0, 0, 0.37);
+    --color--border--hr: rgb(0, 0, 0, 0.12);
+}
+
+/**
+ *
+ *
+ * Typography
+ *
+ *
+ * https://material.io/guidelines/style/typography.html
+ * https://ant.design/docs/spec/font
+ */
+
+html {
+    --typography--primary-font-family: 'Roboto', sans-serif;
+    --typography--secondary-font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+}
+
+/**
+ *
+ *
+ * Shadow
+ *
+ *
+ * https://material.io/guidelines/material-design/elevation-shadows.html
+ */
+
+html {
+    --shadow--box--elevation-0dp: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-1dp: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-2dp: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    --shadow--box--elevation-3dp: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 3px -2px rgba(0, 0, 0, 0.2);
+    --shadow--box--elevation-4dp: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-5dp: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-6dp: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-7dp: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-8dp: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-9dp: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-10dp: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-11dp: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-12dp: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-13dp: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-14dp: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-15dp: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-16dp: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-17dp: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-18dp: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-19dp: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-20dp: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-21dp: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-22dp: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-23dp: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+    --shadow--box--elevation-24dp: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}

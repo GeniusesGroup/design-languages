@@ -1,0 +1,9 @@
+# external packages folder ignore in push
+*node_modules*
+*bower_components*
+*bundle.*
+*yarn-error\.log
+*yarn\.lock
+
+# use this file to store temporarily commit message due vsc clear message on exit!
+___CommitMessage___
