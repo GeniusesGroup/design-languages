@@ -30,10 +30,19 @@ We still hard work to complete exiting languages and add more languages with com
 - Servo (Firefox): https://github.com/servo/servo/blob/master/resources/user-agent.css
 
 ## Usage
+### Project
 We strongly suggest use git submodule instead of any package manager by below command! [Read more about git submodule here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 - Add: `git submodule add https://github.com/SabzCity/design-languages`
 - Clone: `git clone ...` and after call `git submodule init`
 - Update: `git submodule update --remote`
+
+### HTML
+Easily add desire design language to your HTML file like
+```HTML
+<link rel="stylesheet" type="text/css" href="/design-languages/design-language--material.css">
+<link rel="stylesheet" type="text/css" href="/design-languages/theme-light.css">
+```
+Also you can use gui-engine-js concept in gui.sabz.city to load dynamically user selected design language and theme!
 
 ## Production Ready!?
 This package is under development and not ready to use in real production. It can have breakable changes until we remove this part from README!
