@@ -1,0 +1,38 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Tool Bar
+ *
+ * https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html
+ */
+
+/**
+ * 
+ */
+
+[role=toolbar] {
+    display: flex;
+    justify-content: center;
+    /* height: 4rem; */
+    z-index: 4;
+    width: 100%;
+}
+
+@media (max-width: 592px) {
+    [role=toolbar] {
+        position: fixed;
+        bottom: 0;
+        /* height: 3.5rem; */
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        box-shadow: var(--shadow--box--elevation-2dp);
+        background-color: var(--color--surface);
+        color: var(--color--surface--primary-on);
+    }
+
+    [role=toolbar] + main {
+        padding-bottom: 48px;
+    }
+}

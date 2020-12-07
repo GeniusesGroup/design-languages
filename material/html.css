@@ -1,0 +1,24 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ * https://material.io/
+ * https://github.com/material-components/material-components-web
+ */
+
+/**
+ *
+ *
+ * App level styles
+ *
+ *
+ */
+
+html {
+    background-color: rgb(245, 245, 245);
+    color: var(--color--surface--primary-on);
+    font-family: var(--typography--primary-font-family);
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}

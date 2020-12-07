@@ -1,0 +1,275 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+
+/**
+ *
+ *
+ * Page styles
+ *
+ *
+ */
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ *
+ *
+ * Page header
+ *
+ *
+ * https://material.io/components/app-bars-top/
+ * https://material.io/develop/web/components/top-app-bar/
+ */
+
+/**
+ *  Regular Header
+ */
+
+body>header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: var(--shadow--box--elevation-2dp);
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color--surface);
+    color: var(--color--surface--primary-on);
+}
+
+body>header .right {
+    display: inline-flex;
+    flex: 1 1 auto;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* width: 30%; */
+}
+
+body>header .center {
+    display: inline-flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
+
+body>header .left {
+    display: inline-flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+}
+
+body>header .title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    padding-left: 20px;
+    padding-right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+}
+
+[dir=rtl] body>header .title, body>header .title[dir=rtl] {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+@media (max-width: 599px) {
+    body>header {
+        height: 3.5rem;
+    }
+}
+
+/**
+ *  Fixed Header
+ */
+
+body>header.fixed {
+    position: fixed;
+    transition: box-shadow 200ms linear;
+}
+
+body>header.fixed-scrolled {
+    box-shadow: var(--shadow--box--elevation-4dp);
+    transition: box-shadow 200ms linear;
+}
+
+@media (max-width: 599px) {
+    body>header.fixed+main {
+        padding-top: 3.5rem;
+    }
+}
+
+body>header.fixed+main {
+    margin-top: 4rem;
+}
+
+/**
+ *  Short Header
+ */
+
+body>header.short {
+    top: 0;
+    right: auto;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[dir=rtl] body>header.short, body>header.short[dir=rtl] {
+    right: 0;
+    left: auto;
+}
+
+body>header.short .title {
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+.mdc-top-app-bar--short-collapsed {
+    border-radius: 0 0 24px 0;
+    box-shadow: var(--shadow--box--elevation-4dp);
+    width: 56px;
+    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[dir=rtl] .mdc-top-app-bar--short-collapsed, .mdc-top-app-bar--short-collapsed[dir=rtl] {
+    border-radius: 0 0 0 24px;
+}
+
+.mdc-top-app-bar--short-collapsed .title {
+    display: none;
+}
+
+.mdc-top-app-bar--short-collapsed .mdc-top-app-bar__action-item {
+    transition: padding 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item {
+    width: 112px;
+}
+
+.mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item .mdc-top-app-bar__section--align-end {
+    padding-left: 0;
+    padding-right: 12px;
+}
+
+[dir=rtl] .mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item .mdc-top-app-bar__section--align-end, .mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item .mdc-top-app-bar__section--align-end[dir=rtl] {
+    padding-left: 12px;
+    padding-right: 0;
+}
+
+@media (max-width: 599px) {
+    .mdc-top-app-bar--short {
+        transition: width 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mdc-top-app-bar--short-collapsed {
+        transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mdc-top-app-bar--short-collapsed .mdc-top-app-bar__section--align-end {
+        padding-left: 0;
+        padding-right: 12px;
+    }
+    [dir=rtl] .mdc-top-app-bar--short-collapsed .mdc-top-app-bar__section--align-end, .mdc-top-app-bar--short-collapsed .mdc-top-app-bar__section--align-end[dir=rtl] {
+        padding-left: 12px;
+        padding-right: 0;
+    }
+}
+
+body>header.short.fixed+main {
+    padding-top: 3.5rem;
+}
+
+/**
+ *  Prominent Header
+ */
+
+body>header.prominent {
+    height: 8rem;
+}
+
+body>header.prominent .title {
+    align-self: flex-end;
+    padding-bottom: 2px;
+}
+
+body>header.prominent .mdc-top-app-bar__action-item, body>header.prominent .mdc-top-app-bar__navigation-icon {
+    align-self: flex-start;
+}
+
+@media (max-width: 599px) {
+    body>header.prominent .title {
+        padding-bottom: 6px;
+    }
+}
+
+body>header.prominent.fixed+main {
+    padding-top: 8rem;
+}
+
+/**
+ *  Dense Header
+ */
+
+body>header.dense {
+    height: 3rem;
+}
+
+body>header.dense .mdc-top-app-bar__section {
+    padding: 0 4px;
+}
+
+body>header.dense .title {
+    padding-left: 12px;
+    padding-right: 0;
+}
+
+[dir=rtl] body>header.dense .title, body>header.dense .title[dir=rtl] {
+    padding-left: 0;
+    padding-right: 12px;
+}
+
+body>header.dense.fixed+main {
+    padding-top: 3rem;
+}
+
+/**
+ *  Prominent dense Header
+ */
+
+body>header.dense.prominent {
+    height: 96px;
+}
+
+body>header.dense.prominent .mdc-top-app-bar__section {
+    padding: 0 12px;
+}
+
+body>header.dense.prominent .title {
+    padding-left: 20px;
+    padding-right: 0;
+    padding-bottom: 9px;
+}
+
+[dir=rtl] body>header.dense.prominent .title, body>header.dense.prominent .title[dir=rtl] {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+body>header.dense.prominent.fixed+main {
+    padding-top: 96px;
+}

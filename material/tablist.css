@@ -1,0 +1,179 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Tab Bar 
+ *
+ *
+ * https://material.io/develop/web/components/tabs/tab-bar/
+ */
+
+/*
+<div role="tablist" class="scrollable">
+    <button class="min-width stacked" role="tab" checked aria-selected="true" tabindex="0" id="tab-1">
+            <span class="icon material-icons" aria-hidden="true">a</span>
+            <label>Recents</label>
+    </button>
+    <button class="min-width stacked" role="tab" aria-selected="false" tabindex="-1" id="tab-2">
+            <span class="icon material-icons" aria-hidden="true">n</span>
+            <label>Nearby</label>
+    </button>
+    <button class="min-width stacked" role="tab" aria-selected="false" tabindex="-1" id="tab-3">
+            <span class="icon material-icons" aria-hidden="true">f</span>
+            <label>Favorites</label>
+    </button>
+</div>
+*/
+
+[role=tablist] {
+    width: 100%;
+}
+
+[role=tabpanel] {}
+
+[role=tab] {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    font-size: 0.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143em;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 48px;
+    padding: 0 24px;
+    border: none;
+    outline: none;
+    background: none;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+[role=tab]:hover {
+    background-color: var(--color--surface--hover);
+    transition: background-color 150ms linear;
+}
+
+[role=tab]:focus {
+    background-color: var(--color--surface--focus);
+    transition: background-color 150ms linear;
+}
+
+[role=tab]:active {
+    background-color: var(--color--surface--active);
+    /* animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; */
+}
+
+[role=tab][checked], [role=tab][aria-selected=true] {
+    color: var(--color--primary);
+    transition-delay: 100ms;
+    opacity: 1;
+}
+
+/* Tab activated indicator */
+
+[role=tab][checked].underline-indicator::after, [role=tab][aria-selected=true].underline-indicator::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    background-color: var(--color--primary);
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+    transform-origin: left;
+    transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1), 150ms opacity linear;
+}
+
+[role=tab].min-width {
+    flex: 0 1 auto;
+}
+
+[role=tab] label, [role=tab] .icon {
+    transition: 150ms color linear, 150ms opacity linear;
+    z-index: 2;
+}
+
+[role=tab] label {
+    display: inline-block;
+    opacity: 0.6;
+    line-height: 1;
+}
+
+[role=tab] .icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.54;
+    font-size: 24px;
+}
+
+[role=tab]:not(.stacked) .icon+label {
+    padding-left: 8px;
+    padding-right: 0;
+}
+
+[dir=rtl] [role=tab]:not(.stacked) .icon+label, [role=tab]:not(.stacked) .icon+label[dir=rtl] {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+/**
+ *  Stacked tab
+ *
+ * Tabs with icons above labels and indicators restricted to content
+ */
+
+[role=tab].stacked {
+    height: 72px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+[role=tab].stacked .icon {
+    padding-top: 12px;
+}
+
+[role=tab].stacked label {
+    padding-bottom: 16px;
+}
+
+/**
+ *  Scrollable tab
+ *
+ * Tabs with icons above labels and indicators restricted to content
+ */
+
+[role=tablist].scrollable {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+[role=tablist].scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+[role=tablist].scrollable.animating {
+    -webkit-overflow-scrolling: auto;
+}
+
+[role=tablist].scrollable.animating {
+    transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+}

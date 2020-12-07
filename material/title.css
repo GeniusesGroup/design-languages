@@ -1,0 +1,111 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Title Tooltip
+ *
+ * Disabled until find a way to style browser tooltip not add new one!
+ */
+
+/*
+[title]:hover::after {
+    content: attr(title);
+    display: block;
+    position: absolute;
+    font-size: 10px;
+    line-height: 22px;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 8px;
+    border-radius: 3px;
+    background: var(--tooltip-background);
+    color: var(--tooltip-font-color);
+    z-index: 1000;
+}
+[title='']::after {
+    display: none !important;
+}
+
+[title][flow^="up"]::before {
+    bottom: 100%;
+}
+
+[title]:not([flow])::after,
+[title][flow^="up"]::after {
+    margin-bottom: 14px;
+    left: 50%;
+    transform: translate(-50%, -.5em);
+}
+
+[title][flow^="down"]::after {
+    margin-top: 14px;
+    left: 50%;
+    transform: translate(-50%, .5em);
+}
+
+[title][flow^="left"]::after {
+    top: 50%;
+    margin-right: 14px;
+    transform: translate(-.5em, -50%);
+}
+
+[title][flow^="right"]::after {
+    top: 50%;
+    margin-left: 14px;
+    transform: translate(.5em, -50%);
+}
+
+@keyframes tooltips-vert {
+    to {
+        opacity: .9;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes tooltips-horz {
+    to {
+        opacity: .9;
+        transform: translate(0, -50%);
+    }
+}
+
+[title]:not([flow]):hover::after,
+[title][flow^="up"]:hover::after,
+[title][flow^="down"]:hover::after {
+    animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[title][flow^="left"]:hover::after,
+[title][flow^="right"]:hover::after {
+    animation: tooltips-horz 300ms ease-out forwards;
+}
+
+@media only screen and (max-width: 736px) {
+    [title]::after {
+        line-height: 32px;
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    [title]:not([flow])::after,
+    [title][flow^="up"]::after {
+        margin-bottom: 24px;
+    }
+
+    [title][flow^="down"]::after {
+        margin-top: 24px;
+    }
+
+    [title][flow^="left"]::after {
+        margin-right: 24px;
+    }
+
+    [title][flow^="right"]::after {
+        margin-left: 24px;
+    }
+}
+*/

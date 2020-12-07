@@ -1,0 +1,40 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * HR || Separator || Divider
+ *
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+ * https://www.w3.org/WAI/PF/aria/roles#separator
+ * https://material.io/design/components/dividers.html
+ */
+
+hr {
+    height: 0;
+    margin: 0;
+    border: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--color--border--hr);
+}
+
+hr.padded {
+    margin: 0 16px;
+}
+
+hr.inset {
+    margin-left: 72px;
+    margin-right: 0;
+    width: calc(100% - 72px);
+}
+
+[dir=rtl] hr.inset, hr.inset[dir=rtl] {
+    margin-left: 0;
+    margin-right: 72px;
+}
+
+hr.inset.padded {
+    width: calc(100% - 72px - 16px);
+}

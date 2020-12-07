@@ -1,0 +1,43 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * A Link
+ *
+ *
+ */
+
+a {
+    display: inline-block;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:active {
+    color: inherit;
+}
+
+a:hover {
+    opacity: 0.85;
+    /* text-decoration: underline; */
+}
+
+a:focus {
+    opacity: 0.85;
+    /* text-decoration: underline; */
+    /* outline: none; */
+}
+
+a:visited {
+    color: inherit;
+}
+
+a[checked] {}
+
+a[hidden] {
+    display: none;
+}

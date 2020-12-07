@@ -1,0 +1,245 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Layout Grid
+ *
+ *
+ * https://material.io/design/layout/responsive-layout-grid.html
+ * https://material.io/develop/web/components/layout-grid/
+ *
+ * Usage :
+<div class="layout-grid">
+    <div class="span-6"></div>
+    <div class="span-3"></div>
+    <div class="span-2"></div>
+    <div class="span-1"></div>
+    <div class="span-3"></div>
+    <div class="span-1"></div>
+    <div class="span-8"></div>
+</div>
+ */
+
+.layout-grid {
+    display: grid;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.layout-grid.align-left {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.layout-grid.align-right {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.layout-grid>* {
+    width: auto;
+    grid-column-end: span 4;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.layout-grid>.align-top {
+    align-self: start;
+}
+
+.layout-grid>.align-middle {
+    align-self: center;
+}
+
+.layout-grid>.align-bottom {
+    align-self: end;
+}
+
+.layout-grid>.order-1 {
+    order: 1;
+}
+
+.layout-grid>.order-2 {
+    order: 2;
+}
+
+.layout-grid>.order-3 {
+    order: 3;
+}
+
+.layout-grid>.order-4 {
+    order: 4;
+}
+
+.layout-grid>.order-5 {
+    order: 5;
+}
+
+.layout-grid>.order-6 {
+    order: 6;
+}
+
+.layout-grid>.order-7 {
+    order: 7;
+}
+
+.layout-grid>.order-8 {
+    order: 8;
+}
+
+.layout-grid>.order-9 {
+    order: 9;
+}
+
+.layout-grid>.order-10 {
+    order: 10;
+}
+
+.layout-grid>.order-11 {
+    order: 11;
+}
+
+.layout-grid>.order-12 {
+    order: 12;
+}
+
+.layout-grid>.span-1 {
+    grid-column-end: span 1;
+}
+
+.layout-grid>.span-2 {
+    grid-column-end: span 2;
+}
+
+.layout-grid>.span-3 {
+    grid-column-end: span 3;
+}
+
+.layout-grid>.span-4 {
+    grid-column-end: span 4;
+}
+
+/**
+ * Desktop
+ */
+
+@media (min-width: 840px) {
+    .layout-grid {
+        padding: 24px;
+        grid-gap: 24px;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .layout-grid.fixed-column-width {
+        width: 1176;
+        /* column-width*12 + grid-gap*11 + padding*2 : calc(72px*12 + 24px*11 + 24px*2)*/
+    }
+    .layout-grid>.span-5 {
+        grid-column-end: span 5;
+    }
+    .layout-grid>.span-6 {
+        grid-column-end: span 6;
+    }
+    .layout-grid>.span-7 {
+        grid-column-end: span 7;
+    }
+    .layout-grid>.span-8 {
+        grid-column-end: span 8;
+    }
+    .layout-grid>.span-9 {
+        grid-column-end: span 9;
+    }
+    .layout-grid>.span-10 {
+        grid-column-end: span 10;
+    }
+    .layout-grid>.span-11 {
+        grid-column-end: span 11;
+    }
+    .layout-grid>.span-12 {
+        grid-column-end: span 12;
+    }
+}
+
+/**
+ * Tablet
+ */
+
+@media (min-width: 600px) and (max-width: 839px) {
+    .layout-grid {
+        padding: 16px;
+        grid-gap: 16px;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+    .layout-grid.fixed-column-width {
+        width: 720;
+        /* column-width*8 + grid-gap*7 + padding*2 : calc(72px*8 + 16px*7 + 16px*2)*/
+    }
+    .layout-grid>.span-5 {
+        grid-column-end: span 5;
+    }
+    .layout-grid>.span-6 {
+        grid-column-end: span 6;
+    }
+    .layout-grid>.span-7 {
+        grid-column-end: span 7;
+    }
+    .layout-grid>.span-8 {
+        grid-column-end: span 8;
+    }
+    .layout-grid>.span-9 {
+        grid-column-end: span 8;
+    }
+    .layout-grid>.span-10 {
+        grid-column-end: span 8;
+    }
+    .layout-grid>.span-11 {
+        grid-column-end: span 8;
+    }
+    .layout-grid>.span-12 {
+        grid-column-end: span 8;
+    }
+}
+
+/**
+ * Phone
+ */
+
+@media (max-width: 599px) {
+    .layout-grid {
+        /* padding: 16px; */
+        grid-gap: 16px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .layout-grid.fixed-column-width {
+        width: 368;
+        /* column-width*4 + grid-gap*3 + padding*2 : calc(72px*4 + 16px*3 + 16px*2)*/
+    }
+    .layout-grid>.span-5 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-6 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-7 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-8 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-9 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-10 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-11 {
+        grid-column-end: span 4;
+    }
+    .layout-grid>.span-12 {
+        grid-column-end: span 4;
+    }
+}
+
+.layout-grid[hidden] {
+    display: none;
+}

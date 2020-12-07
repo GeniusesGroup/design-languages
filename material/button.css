@@ -1,0 +1,451 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Button
+ *
+ *
+ */
+
+/**
+ * Simple Button
+ */
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    font-family: var(--typography--primary-font-family);
+    font-size: 0.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143em;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    min-width: 4rem;
+    height: 2.25rem;
+    outline: none;
+    cursor: pointer;
+    line-height: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    background-color: transparent;
+    color: var(--color--primary);
+    transition: background-color 150ms linear;
+}
+
+button:hover {
+    background-color: var(--color--primary--secondary-hover);
+}
+
+button:focus {
+    background-color: var(--color--primary--secondary-focus);
+}
+
+button:active {
+    outline: none;
+    background-color: var(--color--primary--secondary-active);
+    /* animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; */
+}
+
+button:disabled {
+    background-color: transparent;
+    color: var(--color--surface--disabled-on);
+    cursor: default;
+    pointer-events: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button[hidden] {
+    display: none !important;
+}
+
+button label {
+    cursor: pointer;
+}
+
+button .icon {
+    margin-left: 0;
+    margin-right: 8px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+[dir=rtl] button .icon, button .icon[dir=rtl] {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+button label+.icon {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+[dir=rtl] button label+.icon, button label+.icon[dir=rtl] {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+button svg.icon {
+    fill: currentColor;
+}
+
+/**
+ * Raised Button
+ */
+
+button.raised {
+    background-color: var(--color--primary);
+    color: var(--color--primary--primary-on);
+    padding: 0 1rem;
+    box-shadow: var(--shadow--box--elevation-2dp);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button.raised:hover {
+    box-shadow: var(--shadow--box--elevation-4dp);
+    background-color: var(--color--primary--hover);
+}
+
+button.raised:focus {
+    box-shadow: var(--shadow--box--elevation-4dp);
+    background-color: var(--color--primary--focus);
+}
+
+button.raised:active {
+    box-shadow: var(--shadow--box--elevation-8dp);
+    background-color: var(--color--primary--active);
+}
+
+button.raised:disabled {
+    box-shadow: var(--shadow--box--elevation-0dp);
+    background-color: var(--color--surface--disabled);
+    color: var(--color--surface--disabled-on);
+}
+
+button.raised .icon, button.unelevated .icon, button.outlined .icon {
+    margin-left: -4px;
+    margin-right: 8px;
+}
+
+[dir=rtl] button.raised .icon, button.raised .icon[dir=rtl], [dir=rtl] button.unelevated .icon, button.unelevated .icon[dir=rtl], [dir=rtl] button.outlined .icon, button.outlined .icon[dir=rtl] {
+    margin-left: 8px;
+    margin-right: -4px;
+}
+
+button.raised label+.icon, button.unelevated label+.icon, button.outlined label+.icon {
+    margin-left: 8px;
+    margin-right: -4px;
+}
+
+[dir=rtl] button.raised label+.icon, button.raised label+.icon[dir=rtl], [dir=rtl] button.unelevated label+.icon, button.unelevated label+.icon[dir=rtl], [dir=rtl] button.outlined label+.icon, button.outlined label+.icon[dir=rtl] {
+    margin-left: -4px;
+    margin-right: 8px;
+}
+
+/**
+ * UnElevated Button
+ */
+
+button.unelevated {
+    background-color: var(--color--primary);
+    color: var(--color--primary--primary-on);
+    padding: 0 1rem;
+}
+
+button.unelevated:disabled {
+    background-color: var(--color--surface--disabled);
+    color: var(--color--surface--disabled-on);
+}
+
+button.unelevated:hover {
+    background-color: var(--color--primary--hover);
+}
+
+/**
+ * Outlined Button
+ */
+
+button.outlined {
+    padding: 0 0.9375rem;
+    background-color: var(--color--surface--light);
+    color: var(--color--primary);
+    border-style: solid;
+    border-width: 0.0625rem;
+    border-color: var(--color--border);
+}
+
+button.outlined:disabled {
+    border-color: var(--color--border--disabled);
+}
+
+/**
+ * Dense Button
+ */
+
+button.dense {
+    height: 2rem;
+    font-size: 0.8125rem;
+    border-radius: 4px;
+}
+
+/**
+ * Fab Button
+ */
+
+button.fab {
+    box-shadow: var(--shadow--box--elevation-6dp);
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), opacity 15ms linear 30ms, transform 270ms 0ms cubic-bezier(0, 0, 0.2, 1);
+    fill: currentColor;
+    background-color: var(--color--secondary);
+    color: var(--color--secondary--primary-on);
+}
+
+button.fab:hover {
+    background-color: var(--color--secondary--hover);
+    box-shadow: var(--shadow--box--elevation-8dp);
+}
+
+button.fab:focus {
+    background-color: var(--color--secondary--focus);
+    box-shadow: var(--shadow--box--elevation-8dp);
+    outline: none;
+}
+
+button.fab:active {
+    background-color: var(--color--secondary--active);
+    box-shadow: var(--shadow--box--elevation-12dp);
+    outline: none;
+}
+
+button.fab::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button.fab>svg {
+    width: 100%;
+}
+
+button.fab:not(button.fab + button.extended) {
+    border-radius: 50%;
+}
+
+button.fab .icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    transition: transform 180ms 90ms cubic-bezier(0, 0, 0.2, 1);
+    fill: currentColor;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.fab label {
+    justify-content: flex-start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+button.fab[exited] {
+    transform: scale(0);
+    transition: opacity 15ms linear 150ms, transform 180ms 0ms cubic-bezier(0.4, 0, 1, 1);
+    opacity: 0;
+}
+
+button.fab[exited] .icon {
+    transform: scale(0);
+    transition: transform 135ms 0ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+/**
+ * Mini Fab Button
+ */
+
+button.fab.mini {
+    width: 40px;
+    height: 40px;
+}
+
+/**
+ * Extended Fab Button
+ */
+
+button.fab.extended {
+    font-size: 0.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 24px;
+    padding: 0 20px;
+    width: auto;
+    max-width: 100%;
+    height: 48px;
+}
+
+button.fab.extended .icon {
+    margin-left: -8px;
+    margin-right: 12px;
+}
+
+[dir=rtl] button.fab.extended .icon, button.fab.extended .icon[dir=rtl] {
+    margin-left: 12px;
+    margin-right: -8px;
+}
+
+button.fab.extended label+.icon {
+    margin-left: 12px;
+    margin-right: -8px;
+}
+
+[dir=rtl] button.fab.extended label+.icon, button.fab.extended label+.icon[dir=rtl] {
+    margin-left: -8px;
+    margin-right: 12px;
+}
+
+/**
+ * Icon Button
+ */
+
+button.icon {
+    display: inline-block;
+    position: relative;
+    min-width: unset;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: transparent;
+    fill: currentColor;
+    color: var(--color--surface--icon-on);
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button.icon:disabled {
+    color: var(--color--surface--disabled-on);
+    cursor: default;
+    pointer-events: none;
+}
+
+button.icon:hover {
+    border-radius: 50%;
+    background-color: var(--color--surface--hover);
+}
+
+button.icon:focus {
+    border-radius: 50%;
+    background-color: var(--color--surface--focus);
+}
+
+button.icon:active {
+    border-radius: 50%;
+    background-color: var(--color--surface--active);
+    /* animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; */
+}
+
+button.icon svg, button.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/**
+ * Switch Icon Button
+ *
+<button role=switch id="speakerPower" checked>
+  <span>off</span>
+  <span>on</span>
+</button>
+ */
+
+button[role=switch] {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    color: var(--color--surface--primary-on);
+    outline: none;
+    font-size: 1.5rem;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+button[role=switch]:disabled {
+    color: var(--color--surface--disabled-on);
+    pointer-events: none;
+}
+
+button[role=switch]:hover {
+    border-radius: 50%;
+    background-color: var(--color--surface--hover);
+}
+
+button[role=switch]:focus {
+    border-radius: 50%;
+    background-color: var(--color--surface--focus);
+}
+
+button[role=switch]:active {
+    border-radius: 50%;
+    background-color: var(--color--surface--active);
+    /* animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; */
+}
+
+button[role=switch] :first-child, button[role=switch][checked] :last-child {
+    display: inline-block;
+}
+
+button[role=switch][checked] :first-child, button[role=switch] :last-child {
+    display: none;
+}
+
+/**
+ * Toggle button
+ * Toggle buttons group a set of actions using layout and spacing.
+ *
+<button type="toggle" checked>
+</button>
+ */
+
+
+button[type="toggle"][checked] {
+    color: var(--color--primary);
+}

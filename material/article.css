@@ -1,0 +1,200 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Article
+ *
+ *
+ */
+
+/**
+ * Card
+ *
+ * https://material.io/components/cards/
+ * https://material.io/develop/web/components/cards/
+ */
+
+article {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--color--surface);
+    box-shadow: var(--shadow--box--elevation-0dp);
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: var(--color--border--hr);
+}
+
+article:hover {
+    box-shadow: var(--shadow--box--elevation-8dp);
+}
+
+article[hidden] {
+    display: none !important;
+}
+
+article img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+}
+
+article h1 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    /* font-weight: 400; */
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* height: 1rem; */
+}
+
+article>section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+article>section[hidden] {
+    display: none;
+}
+
+article>section:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+article>section:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+article>section.square {
+    margin-top: 100%;
+}
+
+article>section.ar-16-9 {
+    margin-top: 56.25%;
+}
+
+article div>img {}
+
+/* Ripple effect */
+
+article>section.ripple:hover {
+    background-color: var(--color--surface--hover);
+}
+
+article>section.ripple:focus, article>div.ripple:focus-within {
+    background-color: var(--color--surface--focus);
+}
+
+article>section.ripple:active {
+    background-color: var(--color--surface--active);
+    /* animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; */
+}
+
+article>footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 52px;
+    padding: 8px;
+}
+
+article>footer.full-bleed {
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-align: left;
+}
+
+[dir=rtl] article>footer.full-bleed, article>footer.full-bleed[dir=rtl] {
+    text-align: right;
+}
+
+article>footer>.left, article>footer>.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+article>footer>.right {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+article>footer>.left+.right {
+    margin-left: 16px;
+    margin-right: 0;
+}
+
+[dir=rtl] article>footer>.left+.right, article>footer>.left+.right[dir=rtl] {
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+article>footer button {
+    margin-left: 0;
+    margin-right: 8px;
+    padding: 0 8px;
+}
+
+[dir=rtl] article>footer button, article>footer button[dir=rtl] {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+article>footer button:last-child {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+[dir=rtl] article>footer button:last-child, article>footer button:last-child[dir=rtl] {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+article>footer button.icon {
+    margin: -6px 0;
+    padding: 12px;
+}
+
+/**
+ * Elevated Card
+ */
+
+article.elevated {
+    box-shadow: var(--shadow--box--elevation-2dp);
+    border-width: 0px;
+    border-style: solid;
+    border-color: unset;
+}
+
+/**
+ * Product Card
+ */
+
+article[typeof="Product"] {}
+
+article[typeof="Product"]>footer {
+    /* margin-top: 24px; */
+}

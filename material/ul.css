@@ -1,0 +1,207 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+
+/**
+ *
+ *
+ * List
+ *
+ *
+ * https://material.io/develop/web/components/lists/
+ */
+
+/**
+ *  
+ */
+
+ul {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    margin: 0;
+    padding: 8px 0;
+    list-style-type: none;
+    color: var(--mdc-theme-text-primary-on-background, rgba(0, 0, 0, 0.87));
+}
+
+li {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    height: 48px;
+    padding: 0 16px;
+    overflow: hidden;
+    transition: background-color 150ms linear;
+}
+
+ul:not(:disabled)>li:not(:disabled):hover {
+    background-color: var(--color--primary--secondary-hover);
+}
+
+li:focus {
+    outline: none;
+    background-color: var(--color--primary--secondary-focus);
+}
+
+ul:not(:disabled)>li:not(:disabled):active {
+    background-color: var(--color--primary--secondary-active);
+    /* animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards; */
+}
+
+li:disabled {
+    color: var(--color--surface--disabled-on);
+}
+
+li[checked] {
+    background-color: var(--color--primary--secondary-focus);
+    color: var(--color--primary--secondary-on);
+}
+
+li .text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    align-self: flex-start;
+}
+
+li .text[for] {
+    pointer-events: none;
+}
+
+li .primary-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin-top: 0;
+    line-height: normal;
+    margin-bottom: -20px;
+    display: block;
+}
+
+li .secondary-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin-top: 0;
+    display: block;
+    color: var(--color--surface--secondary-on);
+}
+
+li .graphic {
+    display: inline-flex;
+    background-color: transparent;
+    color: var(--mdc-theme-text-icon-on-background, rgba(0, 0, 0, 0.38));
+    margin-left: 0;
+    margin-right: 32px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    fill: currentColor;
+}
+
+[dir=rtl] li .graphic, li[dir=rtl] .graphic {
+    margin-left: 32px;
+    margin-right: 0;
+}
+
+li .meta {
+    margin-left: auto;
+    margin-right: 0;
+    color: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38));
+}
+
+[dir=rtl] li .meta, li[dir=rtl] .meta {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/**
+ * Avatar List
+*/
+
+ul.avatar-list li {
+    min-height: 56px;
+}
+
+ul.avatar-list .graphic {
+    margin-left: 0;
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+[dir=rtl] ul.avatar-list .graphic, ul.avatar-list[dir=rtl] .graphic {
+    margin-left: 16px;
+    margin-right: 0;
+}
+
+/**
+ * Dense List
+*/
+
+ul.dense {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 0.812rem;
+}
+
+ul.dense li {
+    min-height: 40px;
+}
+
+ul.dense .primary-text {
+    display: block;
+    margin-top: 0;
+    line-height: normal;
+    margin-bottom: -20px;
+}
+
+ul.dense .secondary-text {
+    display: block;
+    margin-top: 0;
+    line-height: normal;
+    font-size: inherit;
+}
+
+ul.dense .graphic {
+    margin-left: 0;
+    margin-right: 36px;
+    width: 20px;
+    height: 20px;
+}
+
+[dir=rtl] ul.dense .graphic, ul.dense[dir=rtl] .graphic {
+    margin-left: 36px;
+    margin-right: 0;
+}
+
+/**
+ * Avatar dense List
+*/
+
+ul.avatar-list.dense .graphic {
+    margin-left: 0;
+    margin-right: 20px;
+    width: 36px;
+    height: 36px;
+}
+
+[dir=rtl] ul.avatar-list.dense .graphic, ul.avatar-list.dense[dir=rtl] .graphic {
+    margin-left: 20px;
+    margin-right: 0;
+}
