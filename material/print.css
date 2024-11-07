@@ -1,0 +1,23 @@
+/* For license and copyright information please see LEGAL file in repository */
+
+/**
+ *
+ *
+ * Print Media
+ *
+ *
+ */
+
+.just-print {
+    display: none;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .just-print {
+        display: unset;
+    }
+}
