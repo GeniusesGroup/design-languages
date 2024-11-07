@@ -12,6 +12,10 @@ We always care to write content in semantic way by all resources.
 - https://schema.org/
 - https://search.google.com/structured-data/testing-tool
 
+### Design Methodology
+We respect semantic content and style content by design languages.
+- https://developers.google.com/web/fundamentals/design-and-ux/responsive/
+
 ## Supported languages
 We still hard work to complete exiting languages and add more languages with complete guides!
 - [Ant](http://Ant.design)
@@ -31,18 +35,28 @@ We still hard work to complete exiting languages and add more languages with com
 
 ## Usage
 ### Project
-We strongly suggest use git submodule instead of any package manager by below command! [Read more about git submodule here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
-- Add: `git submodule add https://github.com/SabzCity/design-languages`
-- Clone: `git clone ...` and after call `git submodule init`
-- Update: `git submodule update --remote`
+- **package manager**:
+
+- **git submodule**: [Read more about git submodule here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+  - Add: `git submodule add https://github.com/GeniusesGroup/design-languages`
+  - Clone: `git clone ...` and after call `git submodule init`
+  - Update: `git submodule update --remote`
 
 ### HTML
-Easily add desire design language to your HTML file like
+Easily add desire design language files to your HTML file like
 ```HTML
-<link rel="stylesheet" type="text/css" href="/design-languages/design-language--material.css">
+<link rel="stylesheet" type="text/css" href="/design-languages/material/dialog.css">
 <link rel="stylesheet" type="text/css" href="/design-languages/theme-light.css">
 ```
-Also you can use gui-engine-js concept in gui.sabz.city to load dynamically user selected design language and theme!
+or easily run the combined script and add desire design language in one file to your HTML file like
+```HTML
+<link rel="stylesheet" type="text/css" href="/design-languages/material.css">
+<link rel="stylesheet" type="text/css" href="/design-languages/theme-light.css">
+```
+Also you can use gui-engine concept in libjs to load dynamically user selected design language and theme!
+
+## Related projects
+- https://picocss.com/
 
 ## Production Ready!?
 This package is under development and not ready to use in real production. It can have breakable changes until we remove this part from README!
